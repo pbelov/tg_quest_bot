@@ -1,6 +1,7 @@
 package com.pbelov.java.tg.quest_bot;
 
 
+import com.pbelov.java.tg.quest_bot.quest.QuestProcessor;
 import pro.zackpollard.telegrambot.api.TelegramBot;
 
 public class Main {
@@ -26,6 +27,7 @@ public class Main {
         }
 
         //This registers the EchoListener Listener to this bot.
+        QuestProcessor.restoreProgress();
         telegramBot.getEventsManager().register(new EchoListener());
 //        telegramBot.getEventsManager().register(new CommandListener(telegramBot));
         //This method starts the retrieval of updates.

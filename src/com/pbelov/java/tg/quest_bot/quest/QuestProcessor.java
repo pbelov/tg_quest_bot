@@ -58,7 +58,7 @@ public class QuestProcessor {
     public static Boolean verifyAnswer(long userID, String answer) {
         int currentProgress = getProgress(userID);
         if (currentProgress != -1) {
-            return quest.QAList.get(getProgress(userID)).a.equals(answer);
+            return quest.QAList.get(getProgress(userID)).a.equalsIgnoreCase(answer);
         } else {
             return null;
         }
